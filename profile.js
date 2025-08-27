@@ -2,16 +2,14 @@ const root = document.querySelector("#root");
 const reactDomRoot = ReactDOM.createRoot(root);
 function ProfileCard() {
   const [user, setUser] = React.useState(null);
-  
-  React.useEffect(
-    () => {
-        const fetchData = () => fetch("https://jsonplaceholder.typicode.com/users/1")
+
+  React.useEffect(() => {
+    const fetchData = () =>
+      fetch("https://jsonplaceholder.typicode.com/users/1")
         .then((res) => res.json())
-        .then((res) => setUser(res))
-        fetchData()
-    },
-    []
-  );
+        .then((res) => setUser(res));
+    fetchData();
+  }, []);
 
   return (
     <div className="card">
@@ -19,6 +17,12 @@ function ProfileCard() {
         <span>Loading...</span>
       ) : (
         <>
+          <div className="card-avt">
+            <img
+              src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/483336trX/anh-mo-ta.png"
+              className="card-img"
+            />
+          </div>
           <div className="card-row">
             <div className="row-label">Name: </div>
             <span className="row-value">{user.name}</span>

@@ -18,8 +18,15 @@ function Comment() {
         <div className="comment-overlay">
             <div className="comment-content">
                 <button className="close-btn">X</button>
-                <h2 className="comment-title">Bình luận của Khánh</h2>
-                <div className="comment-post"></div>
+                <h2 className="comment-title">Bình luận bài viết của Khánh</h2>
+                <div className="comment-post">
+                    <img src="https://avatarmoi.com/wp-content/uploads/2025/06/Anh-gai-xinh-mong-bu-sexy.webp"/>
+                    <img src="https://vapa.vn/wp-content/uploads/2022/12/hinh-gai-xinh.jpg"/>
+                    <img src="https://vnclass.edu.vn/wp-content/uploads/2025/01/anh-gai-xinh-sexy-24.jpg"/>
+
+
+                    
+                </div>
                 <div className="comment-interaction-bar">
                     <span>123 likes</span>
                     <span>{comments?.length} comments</span>
