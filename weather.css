@@ -1,0 +1,165 @@
+.weather-header {
+    height: 90px;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.drop-down {
+    position: relative;
+    width: 250px;
+    height: 45px;
+    background-color: burlywood;
+    border-radius: 8px;
+}
+.drop-down::after {
+    content: "";
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 2px)
+}
+.drop-down-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    height: 100%;
+    cursor: pointer;
+}
+.drop-down-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(100% + 8px);
+    background-color: #abc;
+    border-radius: 4px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease, height 0.3s ease ;
+}
+.drop-down-menu.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+.drop-down-menu .drop-down-item:first-child {
+    border-radius: 4px 4px 0 0;
+}
+.drop-down-menu .drop-down-item:last-child {
+    border-radius: 0 0 4px 4px;
+}
+.drop-down-item {
+    padding: 8px 16px;
+}
+.drop-down-item:hover {
+    background-color: #a99;
+}
+.drop-down-item + .drop-down-item {
+    border-top: 1px solid #ccc;
+}
+.weather-body {
+    background-color: #ccc;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div#root {
+    display: flex;
+    flex-direction: column;
+}
+.weather-card {
+    width: 600px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.card-header {
+    height: 40px;
+    border-bottom: 2px solid #777;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 16px;
+}
+.card-body {
+    flex: 1;
+    display: flex;
+    margin: 16px;
+}
+.card-body-left {
+    flex: 2;
+    border-right: 1px solid #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-temp {
+    font-size: 50px;
+    font-weight: 900;
+}
+.card-weather-icon {
+    font-size: 60px;
+    color: #ccc;
+}
+.card-weather-status {
+    font-size: 30px;
+    font-weight: 700;
+
+}
+.card-body-right {
+    flex: 3;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-right-row {
+    display: flex;
+    height: 40px;
+    align-items: center;
+
+}
+.card-right-row + .card-right-row {
+    border-top: 1px solid #000;
+}
+.info-error {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 100%;
+    font-size: 30px;
+    padding-top: 70px;
+    color: red;
+}
+.card-footer {
+    height: 50px;
+    border-top: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reset-btn {
+    padding: 8px 14px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: #ccc;
+    border-radius: 4px;
+}
+.reset-btn:hover {
+    background-color: #999;
+}

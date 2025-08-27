@@ -1,0 +1,93 @@
+#root {
+    position: relative;
+    height: 500px;
+    width: 700px;
+    border-radius: 12px;
+    background-color: rgba(111, 111, 111, .5);
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+.entry-bar {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+input {
+    padding: 4px 8px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #000;
+}
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+}
+.task-item {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    gap: 12px;
+    border-radius: 4px;
+    border: none;
+    align-items: center;
+    padding: 8px 12px;
+    justify-content: space-between;
+}
+.task-item[data-complete="true"] {
+    background-color: aquamarine;
+}
+.task-item[data-complete="true"] {
+    background-color: darkolivegreen;
+}
+.task-item:hover {
+    opacity: 1;
+}
+.task-control {
+    height: 100%;
+    display: flex;
+    gap: 4px;
+}
+.del-btn {
+    padding: 0 14px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.del-btn:hover {
+    opacity: 1;
+}
+.check-btn {
+    padding: 0 14px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: red;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.check-btn:hover {
+    opacity: 1;
+}
+.check-btn[data-complete="true"] {
+    background-color: lightskyblue;
+}
+.check-btn[data-complete="false"] {
+    background-color: red;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: gold;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
